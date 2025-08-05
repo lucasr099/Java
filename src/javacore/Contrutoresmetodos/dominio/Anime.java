@@ -1,24 +1,25 @@
-package javacore.Sobrecargasintrofucao.dominio;
+package javacore.Contrutoresmetodos.dominio;
 
 public class Anime {
     public String genero;
     private String nome;
     private String tipo;
     private int espisodios;
+    private String estudio;
 
-    public Anime (){
-
-    }
-    public void init(String nome, String tipo, int espisodios){
-
+    public Anime(String nome,String tipo, int espisodios, String genero){
+        this();
         this.nome = nome;
         this.tipo = tipo;
         this.espisodios = espisodios;
-    }
-
-    public void  init(String nome, String tipo, int espisodios, String genero){
-        this.init(nome, tipo, espisodios);
         this.genero = genero;
+    }
+    public Anime(String nome,String tipo, int espisodios, String genero, String estudio){
+        this(nome, tipo, espisodios, genero);
+        this.estudio = estudio;
+    }
+    public Anime(){
+        System.out.println("Eu sou vazio!!!!");
     }
 
     public void imprime(){
@@ -26,6 +27,7 @@ public class Anime {
         System.out.println(this.tipo);
         System.out.println(this.espisodios);
         System.out.println(this.genero);
+        System.out.println(this.estudio);
     }
 
     public String getGenero() {
