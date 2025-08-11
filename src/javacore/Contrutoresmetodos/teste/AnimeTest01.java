@@ -1,4 +1,4 @@
-package javacore.Contrutoresmetodos.teste.teste;
+package javacore.Contrutoresmetodos.teste;
 
 
 import javacore.Contrutoresmetodos.dominio.Anime;
